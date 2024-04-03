@@ -1,0 +1,24 @@
+version: '3.9'
+services:
+  backend:
+    build: ./backend
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 2
+      endpoint_mode: vip
+    networks:
+      - appnetwork
+
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    ports:
+      - 80:80
+    networks:
+      - appnetwork
+    restart: unless-stopped
+    depends_on:
+      - backend
+networks:
+  appnetwork:
