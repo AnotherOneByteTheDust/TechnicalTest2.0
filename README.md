@@ -41,3 +41,12 @@ make stop env=dev
 ```bash
 make clean env=dev
 ```
+
+## Next steps
+
+- Add new docker compose files with new environments.
+- Add .env files. This way, compose files can be dynamically built and golang build can receive environment parameters.
+- Add a volume and run golang code from the container. This way, all tools to develop can be inside the docker container and the developer wouldn't need to install anything.
+- Add CI/CD. For example, deploy to the different servers (PROD, QA) and golang syntax linter.
+- Add husky with prehooks. For example, commit format.
+- Add certificates for encrypted conections from internet and between containers.
