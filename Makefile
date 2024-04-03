@@ -17,7 +17,8 @@ stop: is_env_defined
 clean: is_env_defined
 	@docker compose -f compose.$(env).yml down
 	@docker container prune
-	@docker rmi technicaltest-api
+	@docker rmi technicaltest-backend
+	@docker rmi technicaltest-nginx
 
 # REQUIREMENTS
 is_env_defined:

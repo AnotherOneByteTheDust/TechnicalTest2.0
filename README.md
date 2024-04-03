@@ -1,5 +1,9 @@
 # TechnicalTest
 
+Create docker containers:
+    - Two servers show different pages that listens from port 8555
+    - One proxy that works as load balancer and listens from port 80.
+
 ## Commands
 
 ### Start container
