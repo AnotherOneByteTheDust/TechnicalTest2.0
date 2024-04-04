@@ -42,6 +42,10 @@ make stop env=dev
 make clean env=dev
 ```
 
+### Check it works
+
+Start containers and access to [http://localhost/health](http://localhost/health)
+
 ## Next steps
 
 - Add new docker compose files with new environments.
